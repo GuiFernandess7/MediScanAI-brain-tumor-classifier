@@ -17,12 +17,6 @@ from .serializers import (
     PatientSerializer
 )
 
-<<<<<<< HEAD
-from api.ggsheets import set_sheet
-=======
-#from api.ggsheets import set_sheet
->>>>>>> 2bc1a28 (docker compose updated)
-
 class AddTomographyView(APIView):
     serializer_class = TomographySerializer
     permission_classes = [IsAuthenticated]
@@ -123,16 +117,6 @@ class PatientViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
-
-<<<<<<< HEAD
-        row = [request.data["full_name"], request.data["registration_number"], request.user.full_name, request.data['cpf']]
-        worksheet = set_sheet(sheet_name="Pacientes")
-        worksheet.append_row(row)
-=======
-        #row = [request.data["full_name"], request.data["registration_number"], request.user.full_name, request.data['cpf']]
-        #worksheet = set_sheet(sheet_name="Pacientes")
-        #worksheet.append_row(row)
->>>>>>> 2bc1a28 (docker compose updated)
 
         serializer.save(doctor=request.user)
         response = {
