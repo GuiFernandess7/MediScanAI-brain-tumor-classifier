@@ -10,10 +10,18 @@ MediScanAI is a computer vision healthcare project applying AI for medical insig
 
 <hr>
 
+<<<<<<< HEAD
 ![image info](swagger_docs_imgs/swagger-mediscanai.png)
 
 <hr>
 
 ![image info](swagger_docs_imgs/auth-swagger.png)
+=======
+![image info](docs/swagger_docs_imgs/swagger-mediscanai.png)
+
+<hr>
+
+![image info](docs/swagger_docs_imgs/auth-swagger.png)
+>>>>>>> 2bc1a28 (docker compose updated)
 
 <hr>

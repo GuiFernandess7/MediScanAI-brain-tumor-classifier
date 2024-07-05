@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import gspread
+=======
+""" import gspread
+>>>>>>> 2bc1a28 (docker compose updated)
 from pathlib import Path
 from oauth2client.service_account import ServiceAccountCredentials
 import os
@@ -14,4 +18,8 @@ spreadsheet_key = '1Kyrdepsi5eYpOQv6-LNhWy84LB0qrgnuuTe9VpNIRf0'
 
 def set_sheet(sheet_name):
     worksheet = gc.open_by_key(spreadsheet_key).worksheet(sheet_name)
+<<<<<<< HEAD
     return worksheet
+=======
+    return worksheet """
+>>>>>>> 2bc1a28 (docker compose updated)

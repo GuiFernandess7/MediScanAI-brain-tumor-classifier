@@ -111,7 +111,7 @@ else:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mediscanai-v3',
+        'NAME': 'mediscanai',
         'USER': 'postgres',
         'PASSWORD': '#2c6o8v4I',
         'HOST': '127.0.0.1',
