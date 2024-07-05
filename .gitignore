@@ -170,3 +170,7 @@ cython_debug/
 # Django
 migrations
 /data
+
+# Nodejs
+node_modules
+package-lock.json
