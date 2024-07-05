@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: ./backend
+      dockerfile: ./app/Dockerfile
+    command: >
+      sh -c "python manage.py wait_for_db &&
+             python manage.py makemigrations users &&
+             python manage.py makemigrations api &&
+             python manage.py migrate --run-syncdb &&
+             python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - 8000:8000
+    env_file:
+      - .env
