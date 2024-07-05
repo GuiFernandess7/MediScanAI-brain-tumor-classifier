@@ -1,6 +1,7 @@
-# Documentation
+## MediScanAI | Brain Tumor Classifier API
 
-## Endpoints
+### Docs
+
 <hr>
 
 ![image info](swagger_docs_imgs/swagger-mediscanai.png)
