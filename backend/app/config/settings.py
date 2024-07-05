@@ -99,10 +99,10 @@ if not DEBUG:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'mediscanai-v3',
-        'USER': 'postgres',
-        'PASSWORD': '#2c6o8v4I',
-        'HOST': '127.0.0.1',
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASS'),
+        'HOST': os.environ.get('DB_HOST'),
         'PORT': 5432
     }
 }
@@ -113,7 +113,7 @@ else:
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mediscanai',
         'USER': 'postgres',
-        'PASSWORD': '#2c6o8v4I',
+        'PASSWORD': 'gui2002',
         'HOST': '127.0.0.1',
         'PORT': 5432
     }
