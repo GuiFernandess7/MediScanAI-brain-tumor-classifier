@@ -4,8 +4,8 @@ MediScanAI is a computer vision healthcare project applying AI for medical insig
 
 <div style="display: flex; justify-content: space-between;">
     <img src="media/brain/brain1.jpg" alt="Tomograhpy" style="width: 30%;">
-    <img src="media/brain/brain1.jpg" alt="Tomography 2" style="width: 30%;">
-    <img src="media/brain/brain1.jpg" alt="Tomography 3" style="width: 30%;">
+    <img src="media/brain/brain2.jpg" alt="Tomography 2" style="width: 30%;">
+    <img src="media/brain/brain3.jpg" alt="Tomography 3" style="width: 30%;">
 </div>
 
 ### Request preview
