@@ -3,7 +3,7 @@
 MediScanAI is a computer vision healthcare project applying AI for medical insights. It classifies brain tumor types based on tomography images.
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="media/brain/brain1.jpg" alt="Tomograhpy" style="width: 50%;">
+    <img src="media/brain/brain1.jpg" alt="Tomograhpy" style="width: 40%; height: auto;">
     <img src="media/brain/brain2.jpg" alt="Tomography 2" style="width: 30%;">
     <img src="media/brain/brain3.jpg" alt="Tomography 3" style="width: 30%;">
 </div>
@@ -22,7 +22,9 @@ MediScanAI is a computer vision healthcare project applying AI for medical insig
 
 * * Medical professionals can upload and associate tomography images with patient records for detailed analysis.
 
-* **Tumor Type Classification**
+#
+
+### **Tumor Type Classification**
 
 The platform provides probabilities for different types of brain tumors, including:
 
