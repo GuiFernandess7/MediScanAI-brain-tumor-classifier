@@ -1,23 +1,23 @@
-import { createMemoryHistory, createRouter } from 'vue-router'
-import SignIn from './components/SignUp.vue'
+import { createWebHistory, createRouter } from 'vue-router'
+import SignIn from './components/SignIn.vue'
 import SignUp from './components/SignUp.vue'
 
 const routes = [
   {
     path: '/',
-    name: 'SignIn',
+    name: 'signIn',
     component: SignIn
   },
   {
     path: '/signup',
-    name: 'SignUp',
+    name: 'signUp',
     component: SignUp
   }
 ]
 
 const router = createRouter({
-    history: createMemoryHistory(),
-    routes,
+  history: createWebHistory(),
+  routes,
 })
 
 export default router

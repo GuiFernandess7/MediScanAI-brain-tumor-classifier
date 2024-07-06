@@ -16,7 +16,8 @@
           </div>
           <button>Login</button>
           <p>
-            Already have an account? <a href="#">Sign In</a>
+            Already have an account?
+            <router-link to="/">Sign In</router-link>
           </p>
         </div>
       </div>
@@ -30,7 +31,7 @@ export default {
 name: 'SignUp',
 components: {
     AuthPage
-}
+    }
 }
 </script>
 

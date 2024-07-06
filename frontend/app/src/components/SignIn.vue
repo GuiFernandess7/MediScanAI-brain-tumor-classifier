@@ -15,7 +15,8 @@
         </div>
         <button>Login</button>
         <p>
-          Don't have an account? <a href="#">Sign up</a>
+          Don't have an account?
+          <router-link to="/signup">Sign up</router-link>
         </p>
         <button class="google-auth">Authorize with Google</button>
       </div>
