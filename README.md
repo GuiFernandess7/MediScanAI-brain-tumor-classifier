@@ -49,6 +49,10 @@ https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022
 
 <img width="623" alt="Captura de tela 2024-07-05 010826" src="https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/26dc3745-5aec-4041-921a-ff246dc59983">
 
+### Login FrontEnd Preview
+
+https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/447518a5-7e98-4fa5-b30f-a7604c04c076
+
 ### Docs
 
 <hr>
