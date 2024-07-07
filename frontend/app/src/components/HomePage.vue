@@ -1,21 +1,42 @@
 <template>
   <div class="home-container">
-    <div class="white-box"></div>
+    <div class="white-box">
+      <img class="logo" src="../assets/logo.svg" alt="" />
+      <button class="button-custom" @click="redirectToStreamlit">
+        Realizar Análise
+      </button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "HomePage",
+  methods: {
+    redirectToStreamlit() {
+      window.location.href = "http://localhost:8501";
+    },
+  },
 };
 </script>
 
 <style>
+body {
+  background-image: url("../assets/home-background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 .home-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70vh;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
 }
 
 .white-box {
@@ -29,6 +50,18 @@ export default {
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(254, 254, 254, 0.93);
+}
+
+.button-custom {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: #143888;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .upload-column {

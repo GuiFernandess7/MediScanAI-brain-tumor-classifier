@@ -13,7 +13,7 @@
           </label>
           <a href="#">Reset Password</a>
         </div>
-        <button>Login</button>
+        <button class="login-button" @click="redirectToHome">Log In</button>
         <p>
           Don't have an account?
           <router-link to="/signup">Sign up</router-link>
@@ -31,6 +31,11 @@ export default {
   name: "SignIn",
   components: {
     AuthPage,
+  },
+  methods: {
+    redirectToHome() {
+      this.$router.push("/home");
+    },
   },
 };
 </script>
