@@ -49,7 +49,8 @@ html, body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background-color: white;
+  margin-right: -8px;
+  margin-top: -59px;
 }
 
 .right-panel h2 {

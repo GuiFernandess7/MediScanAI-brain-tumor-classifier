@@ -1,7 +1,7 @@
 <template>
     <div class="left-panel">
         <video class="background-video" autoplay loop muted>
-            <source src="../assets/preview.mp4" type="video/mp4">
+            <source src="../assets/preview2.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="video-overlay"></div>

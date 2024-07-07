@@ -1,22 +1,24 @@
 <template>
-  <div class="home-container">
-    <div class="white-box">
-      <h1>Test</h1>
+    <div class="home-container">
+      <div class="white-box">
+        <h1>Test</h1>
+        <div class="upload-column">
+          <input type="file" id="file-upload" class="file-upload-input" />
+          <label for="file-upload" class="file-upload-label">Upload File</label>
+        </div>
+      </div>
     </div>
-  </div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage'
+  name: 'HomePage',
 }
 </script>
 
 <style>
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 90%;
+
+body {
   background-image: url("../assets/home-background.jpg");
   background-size: cover;
   background-position: center;
@@ -36,8 +38,9 @@ body, html {
   align-items: center;
   width: 35%;
   height: 85%;
+  max-width: 600px;
   background-color: rgba(255, 255, 255, 0.878);
-  border-radius: 2px;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.278);
 }
 
@@ -46,6 +49,7 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .file-upload-input {
