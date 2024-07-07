@@ -1,6 +1,6 @@
 <template>
   <div class="login-container">
-    <AuthPage/>
+    <AuthPage />
     <div class="right-panel">
       <h2>Sign In</h2>
       <div class="login">
@@ -25,19 +25,19 @@
 </template>
 
 <script>
-import AuthPage from "./AuthPage.vue"
+import AuthPage from "./AuthPage.vue";
 
 export default {
-  name: 'SignIn',
+  name: "SignIn",
   components: {
-    AuthPage
-  }
-}
+    AuthPage,
+  },
+};
 </script>
 
 <style>
-
-html, body {
+html,
+body {
   height: 90%;
   padding-left: 0%;
 }
@@ -55,7 +55,7 @@ html, body {
 
 .right-panel h2 {
   margin-bottom: 35px;
-  size: 10px;
+  size: 15px;
   color: #333;
 }
 
