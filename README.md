@@ -10,17 +10,17 @@ MediScanAI is a computer vision healthcare project applying AI for medical insig
 
 ### Key Features
 
-* **Patient Registration**
+- **Patient Registration**
 
-*  * Doctors and radiologists can easily register new patients, enabling comprehensive medical records management.
+- - Doctors and radiologists can easily register new patients, enabling comprehensive medical records management.
 
-*  **Signin and Signup for Medical Professionals**
+- **Signin and Signup for Medical Professionals**
 
-*  * Seamless login and signup processes designed specifically for doctors and radiologists.
+- - Seamless login and signup processes designed specifically for doctors and radiologists.
 
-*  **Medical Image Management**
+- **Medical Image Management**
 
-* * Medical professionals can upload and associate tomography images with patient records for detailed analysis.
+- - Medical professionals can upload and associate tomography images with patient records for detailed analysis.
 
 #
 
@@ -45,13 +45,13 @@ MediScanAI is developed with educational purposes in mind. It serves as a tool t
 
 https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/8bdcb5ce-0dd5-4dac-86ca-a291f7b20536
 
-### Request preview
-
-<img width="623" alt="Captura de tela 2024-07-05 010826" src="https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/26dc3745-5aec-4041-921a-ff246dc59983">
-
 ### Login FrontEnd Preview
 
 https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/447518a5-7e98-4fa5-b30f-a7604c04c076
+
+### Request preview
+
+<img width="623" alt="Captura de tela 2024-07-05 010826" src="https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/26dc3745-5aec-4041-921a-ff246dc59983">
 
 ### Docs
 
