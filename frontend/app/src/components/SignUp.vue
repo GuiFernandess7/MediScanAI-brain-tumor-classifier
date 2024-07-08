@@ -4,17 +4,18 @@
     <div class="right-panel">
       <h2>Sign Up</h2>
       <div class="login">
-        <input type="text" placeholder="Full Name" />
-        <input type="text" placeholder="CRM" />
-        <input type="text" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input v-model="fullName" type="text" placeholder="Full Name" />
+        <input v-model="crm" type="text" placeholder="CRM" />
+        <input v-model="email" type="text" placeholder="Email" />
+        <input v-model="password" type="password" placeholder="Password" />
         <div class="options">
           <label>
-            <input type="checkbox" />
+            <input v-model="rememberPassword" type="checkbox" />
             Remember Password
           </label>
         </div>
-        <button>Login</button>
+        <button @click="signUp">Sign Up</button>
+        <p v-if="message" class="message">{{ message }}</p>
         <p>
           Already have an account?
           <router-link to="/">Sign In</router-link>
@@ -25,12 +26,48 @@
 </template>
 
 <script>
+import axios from "axios";
 import AuthPage from "./AuthPage.vue";
 
 export default {
   name: "SignUp",
   components: {
     AuthPage,
+  },
+  data() {
+    return {
+      fullName: "",
+      crm: "",
+      email: "",
+      password: "",
+      rememberPassword: false,
+      message: "",
+    };
+  },
+  methods: {
+    async signUp() {
+      try {
+        const response = await axios.post("/auth/signup/", {
+          full_name: this.fullName,
+          crm: this.crm,
+          email: this.email,
+          password: this.password,
+        });
+
+        this.message = response.data.message;
+        this.clearFields();
+      } catch (error) {
+        console.error("Error during signup:", error.response);
+        this.message = "Something went wrong. Please try again later.";
+      }
+    },
+    clearFields() {
+      this.fullName = "";
+      this.crm = "";
+      this.email = "";
+      this.password = "";
+      this.rememberPassword = false;
+    },
   },
 };
 </script>
@@ -40,6 +77,11 @@ html,
 body {
   height: 90%;
   padding-left: 0%;
+}
+
+.message {
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .right-panel {
