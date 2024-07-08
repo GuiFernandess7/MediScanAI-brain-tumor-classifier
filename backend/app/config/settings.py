@@ -40,11 +40,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'drf_yasg',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -95,7 +97,7 @@ SIMPLE_JWT = {
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 if not DEBUG:
-    ALLOWED_HOSTS = ['https://127.0.0.1:8051'] # Streamlit
+    ALLOWED_HOSTS = []
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -107,7 +109,7 @@ if not DEBUG:
     }
 }
 else:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -142,6 +144,15 @@ AUTH_PASSWORD_VALIDATORS = [
 AUTHENTICATION_BACKENDS = [
     'access.auth.CRMAuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
+]
+
+CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    'content-type',
+    'authorization',
 ]
 
 # Internationalization
