@@ -86,7 +86,7 @@ export default {
 }
 
 .card button:hover {
-  background-color: #0f0a0a; /* Adicione esta linha para a cor do hover */
+  background-color: #0f0a0a; 
 }
 
 .card .drag-area {

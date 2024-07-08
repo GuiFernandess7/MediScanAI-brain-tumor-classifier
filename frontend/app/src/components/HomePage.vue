@@ -5,7 +5,6 @@
         <UploadFile />
       </div>
       <div class="right-side">
-        <!-- Aqui você pode adicionar o código para mostrar os resultados da imagem -->
         <p>Results will show up here.</p>
       </div>
     </div>
@@ -39,7 +38,7 @@ body {
 
 .white-box {
   display: flex;
-  width: 90%; /* Aumente conforme necessário */
+  width: 90%;
   height: 85%;
   max-width: 800px;
   background-color: rgb(255, 255, 255);
@@ -57,12 +56,12 @@ body {
 }
 
 .left-side {
-  flex: 0.5; /* 50% do white-box */
-  padding-right: 10px; /* Espaço entre o upload e a direita */
+  flex: 0.5;
+  padding-right: 10px;
 }
 
 .right-side {
-  flex: 0.5; /* 50% do white-box */
-  padding-left: 10px; /* Espaço entre o upload e a direita */
+  flex: 0.5;
+  padding-left: 10px;
 }
 </style>
