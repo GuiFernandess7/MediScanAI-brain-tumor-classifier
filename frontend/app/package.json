@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@canopassoftware/vue-file-upload": "^1.0.8",
+    "axios": "^1.7.2",
     "core-js": "^3.8.3",
     "primeicons": "^7.0.0",
     "primevue": "^4.0.0",
