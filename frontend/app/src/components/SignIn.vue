@@ -4,16 +4,17 @@
     <div class="right-panel">
       <h2>Sign In</h2>
       <div class="login">
-        <input type="text" placeholder="CRM" />
-        <input type="password" placeholder="Password" />
+        <input v-model="crm" type="text" placeholder="CRM" />
+        <input v-model="password" type="password" placeholder="Password" />
         <div class="options">
           <label>
-            <input type="checkbox" />
+            <input v-model="rememberPassword" type="checkbox" />
             Remember Password
           </label>
           <a href="#">Reset Password</a>
         </div>
-        <button class="login-button" @click="redirectToHome">Log In</button>
+        <button class="login-button" @click="login">Log In</button>
+        <p v-if="message" class="message">{{ message }}</p>
         <p>
           Don't have an account?
           <router-link to="/signup">Sign up</router-link>
@@ -25,6 +26,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import AuthPage from "./AuthPage.vue";
 
 export default {
@@ -32,7 +34,28 @@ export default {
   components: {
     AuthPage,
   },
+  data() {
+    return {
+      crm: "",
+      password: "",
+      message: "",
+    };
+  },
   methods: {
+    async login() {
+      try {
+        const response = await axios.post("/auth/login/", {
+          crm: this.crm,
+          password: this.password,
+        });
+
+        this.message = response.data.message;
+        this.redirectToHome();
+      } catch (error) {
+        console.error("Error during login:", error.response);
+        this.message = "Invalid credentials. Please try again.";
+      }
+    },
     redirectToHome() {
       this.$router.push("/home");
     },
@@ -45,6 +68,11 @@ html,
 body {
   height: 90%;
   padding-left: 0%;
+}
+
+.message {
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .right-panel {
