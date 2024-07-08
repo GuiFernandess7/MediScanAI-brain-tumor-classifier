@@ -4,7 +4,7 @@ Views for image requests.
 from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.generics import get_object_or_404
 from rest_framework.generics import RetrieveAPIView, DestroyAPIView, ListAPIView
 
@@ -19,7 +19,7 @@ from .serializers import (
 
 class AddTomographyView(APIView):
     serializer_class = TomographySerializer
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
 
     def post(self, request, *args, **kwargs):
         patient_id = self.request.query_params.get("patient_id")
