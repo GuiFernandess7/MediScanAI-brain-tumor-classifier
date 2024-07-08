@@ -1,21 +1,24 @@
 <template>
   <div class="home-container">
     <div class="white-box">
-      <img class="logo" src="../assets/logo.svg" alt="" />
-      <button class="button-custom" @click="redirectToStreamlit">
-        Realizar Análise
-      </button>
+      <div class="left-side">
+        <UploadFile />
+      </div>
+      <div class="right-side">
+        <!-- Aqui você pode adicionar o código para mostrar os resultados da imagem -->
+        <p>Results will show up here.</p>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+import UploadFile from "./UploadFile.vue";
+
 export default {
   name: "HomePage",
-  methods: {
-    redirectToStreamlit() {
-      window.location.href = "http://localhost:8501";
-    },
+  components: {
+    UploadFile,
   },
 };
 </script>
@@ -34,75 +37,32 @@ body {
   height: 70vh;
 }
 
-.logo {
-  width: 150px;
-  margin-bottom: 20px;
-}
-
 .white-box {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 35%;
+  width: 90%; /* Aumente conforme necessário */
   height: 85%;
-  max-width: 600px;
+  max-width: 800px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(254, 254, 254, 0.93);
+  padding: 20px;
 }
 
-.button-custom {
-  background-color: transparent;
-  border: 2px solid transparent;
-  color: #143888;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.upload-column {
+.left-side,
+.right-side {
+  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.file-upload-input {
-  display: none;
+.left-side {
+  flex: 0.5; /* 50% do white-box */
+  padding-right: 10px; /* Espaço entre o upload e a direita */
 }
 
-.file-upload-label {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #143888;
-  color: #ffffff;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.file-upload-label:hover {
-  background-color: #0d2a5e;
-}
-
-.button-custom {
-  width: 220px;
-  height: 70px;
-  margin-top: 20px;
-  border-radius: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
-  color: #143888;
-  transition: background-color 0.3s ease;
-}
-
-.button-custom:hover {
-  background-color: #143888;
-  color: #ffffff;
+.right-side {
+  flex: 0.5; /* 50% do white-box */
+  padding-left: 10px; /* Espaço entre o upload e a direita */
 }
 </style>
