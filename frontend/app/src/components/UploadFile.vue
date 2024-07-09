@@ -17,17 +17,22 @@
         <img :src="image.url" />
       </div>
     </div>
-    <button type="button" @click="uploadImage">Analyse</button>
+    <button type="button" @click="submitFile" :disabled="loading">
+      Analyse
+    </button>
+    <p v-if="loading">Uploading...</p>
   </div>
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "UploadFile",
   data() {
     return {
       image: null,
       isDragging: false,
+      loading: false,
     };
   },
   methods: {
@@ -44,12 +49,36 @@ export default {
       this.image = null;
       this.$refs.fileInput.value = null;
     },
-    uploadImage() {
+    async submitFile() {
       if (!this.image) {
-        alert("No image selected");
+        alert("No file selected!");
         return;
       }
-      console.log("Uploading", this.image.name);
+      const formData = new FormData();
+      formData.append("file", this.image);
+
+      this.loading = true;
+      this.$emit("loading", true);
+
+      try {
+        const response = await axios.post(
+          "/api/v1/add-tomography/?patient_id=1",
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+        console.log("File uploaded successfully", response.data);
+        this.$emit("upload-success", response.data);
+      } catch (error) {
+        console.error("Error uploading file", error);
+        this.$emit("upload-failure", error);
+      } finally {
+        this.loading = false;
+        this.$emit("loading", false);
+      }
     },
   },
 };
@@ -86,7 +115,7 @@ export default {
 }
 
 .card button:hover {
-  background-color: #0f0a0a; 
+  background-color: #0f0a0a;
 }
 
 .card .drag-area {
