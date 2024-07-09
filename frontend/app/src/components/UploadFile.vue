@@ -9,7 +9,7 @@
         <span class="select" role="button" @click="selectFiles"> Choose </span>
       </span>
       <div class="select">Drop image here</div>
-      <input name="file" type="file" ref="fileInput" @change="onFileSelect" />
+      <input name="image" type="file" ref="fileInput" @change="onFileSelect" />
     </div>
     <div class="container">
       <div class="image" v-if="image">
@@ -44,18 +44,21 @@ export default {
       if (!file) return;
       if (file.type.split("/")[0] !== "image") return;
       this.image = { name: file.name, url: URL.createObjectURL(file) };
+      this.img_file = file;
     },
     removeImage() {
       this.image = null;
       this.$refs.fileInput.value = null;
     },
+
     async submitFile() {
       if (!this.image) {
         alert("No file selected!");
         return;
       }
       const formData = new FormData();
-      formData.append("file", this.image);
+      formData.append("image", this.image_file);
+      formData.append("category", "Brain");
 
       this.loading = true;
       this.$emit("loading", true);
@@ -70,6 +73,7 @@ export default {
             },
           }
         );
+
         console.log("File uploaded successfully", response.data);
         this.$emit("upload-success", response.data);
       } catch (error) {
