@@ -28,7 +28,10 @@ class Tomography(models.Model):
     ]
     image = models.ImageField(upload_to=image_file_path, blank=False, null=False)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, blank=False, null=False)
-    results = models.TextField(null=True, blank=True)
+    glioma = models.FloatField(null=True, blank=True)
+    meningioma = models.FloatField(null=True, blank=True)
+    notumor = models.FloatField(null=True, blank=True)
+    pituitary = models.FloatField(null=True, blank=True)
     creation_date = models.DateTimeField(auto_now_add=True)
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='tomographies', null=True, blank=True)
 
