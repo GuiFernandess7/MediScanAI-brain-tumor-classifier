@@ -2,10 +2,12 @@
   <div class="home-container">
     <div class="white-box">
       <div class="left-side">
-        <UploadFile />
+        <UploadFile
+          @upload-success="handleUploadSuccess"
+          @loading="handleLoading" />
       </div>
       <div class="right-side">
-        <p>Results will show up here.</p>
+        <p>{{ loading ? "Loading..." : uploadResult }}</p>
       </div>
     </div>
   </div>
@@ -18,6 +20,20 @@ export default {
   name: "HomePage",
   components: {
     UploadFile,
+  },
+  data() {
+    return {
+      uploadResult: "Results will show up here.",
+      loading: false,
+    };
+  },
+  methods: {
+    handleUploadSuccess(result) {
+      this.uploadResult = result;
+    },
+    handleLoading(isLoading) {
+      this.loading = isLoading;
+    },
   },
 };
 </script>
