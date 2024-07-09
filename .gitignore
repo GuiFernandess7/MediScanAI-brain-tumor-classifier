@@ -170,6 +170,7 @@ cython_debug/
 # Django
 migrations
 /data
+backend/app/media
 
 # Nodejs
 node_modules
