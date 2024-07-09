@@ -57,7 +57,7 @@ export default {
         return;
       }
       const formData = new FormData();
-      formData.append("image", this.image_file);
+      formData.append("image", this.img_file);
       formData.append("category", "Brain");
 
       this.loading = true;
