@@ -13,10 +13,10 @@
           alt="Tomography" />
         <p v-else-if="loading">Loading...</p>
         <p v-else-if="!loading && Object.keys(uploadResult).length > 0">
-          Glioma: {{ uploadResult.glioma }} <br />
-          Meningioma: {{ uploadResult.meningioma }} <br />
-          Pituitary: {{ uploadResult.pituitary }} <br />
-          Notumor: {{ uploadResult.notumor }}
+          Glioma: {{ uploadResult.data.glioma }} <br />
+          Meningioma: {{ uploadResult.data.meningioma }} <br />
+          Pituitary: {{ uploadResult.data.pituitary }} <br />
+          Notumor: {{ uploadResult.data.notumor }}
         </p>
       </div>
     </div>
@@ -38,8 +38,11 @@ export default {
     };
   },
   methods: {
-    handleUploadSuccess(result) {
-      this.uploadResult = result;
+    async handleUploadSuccess(result) {
+      if (result) {
+        this.uploadResult = result;
+        console.log(this.uploadResult.data.glioma);
+      }
     },
     handleLoading(isLoading) {
       this.loading = isLoading;
