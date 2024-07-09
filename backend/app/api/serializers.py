@@ -13,8 +13,8 @@ from api.models import (
 class TomographySerializer(serializers.ModelSerializer):
     class Meta:
         model = Tomography
-        fields = ('category', 'image', 'results',)
-        read_only_fields = ('created_at', 'results',)
+        fields = ('category', 'image', 'glioma', 'meningioma', 'pituitary', 'notumor')
+        read_only_fields = ('created_at', 'glioma', 'meningioma', 'pituitary', 'notumor')
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
@@ -26,7 +26,10 @@ class TomographySerializer(serializers.ModelSerializer):
 
         try:
             results = self.calculate_image_results(temp_file.name)
-            validated_data['results'] = results
+            validated_data['glioma'] = results["glioma"]
+            validated_data['meningioma'] = results["meningioma"]
+            validated_data['pituitary'] = results["pituitary"]
+            validated_data['notumor'] = results["notumor"]
             return super().create(validated_data)
         finally:
             os.remove(temp_file.name)
