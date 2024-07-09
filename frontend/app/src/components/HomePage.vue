@@ -29,7 +29,8 @@ export default {
   },
   methods: {
     handleUploadSuccess(result) {
-      this.uploadResult = result;
+      this.response = JSON.parse(JSON.stringify(result));
+      this.uploadResult = response.data.results;
     },
     handleLoading(isLoading) {
       this.loading = isLoading;
@@ -79,5 +80,9 @@ body {
 .right-side {
   flex: 0.5;
   padding-left: 10px;
+}
+
+.results-container {
+  text-align: center;
 }
 </style>
