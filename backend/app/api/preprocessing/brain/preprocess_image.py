@@ -29,7 +29,6 @@ def preprocess_image(image_path, target_size):
     image = image.resize(target_size)
     img_array = img_to_array(image)
     img_array = img_array.reshape(1, *target_size, 3)
-    img_array /= 255.0
     return img_array
 
 def get_image_results(image_path, target_size=(150, 150)):
