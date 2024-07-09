@@ -7,7 +7,17 @@
           @loading="handleLoading" />
       </div>
       <div class="right-side">
-        <p>{{ loading ? "Loading..." : uploadResult }}</p>
+        <img
+          v-if="uploadResult.image"
+          :src="uploadResult.image"
+          alt="Tomography" />
+        <p v-else-if="loading">Loading...</p>
+        <p v-else-if="!loading && Object.keys(uploadResult).length > 0">
+          Glioma: {{ uploadResult.glioma }} <br />
+          Meningioma: {{ uploadResult.meningioma }} <br />
+          Pituitary: {{ uploadResult.pituitary }} <br />
+          Notumor: {{ uploadResult.notumor }}
+        </p>
       </div>
     </div>
   </div>
@@ -23,14 +33,13 @@ export default {
   },
   data() {
     return {
-      uploadResult: "Results will show up here.",
+      uploadResult: {},
       loading: false,
     };
   },
   methods: {
     handleUploadSuccess(result) {
-      this.response = JSON.parse(JSON.stringify(result));
-      this.uploadResult = response.data.results;
+      this.uploadResult = result;
     },
     handleLoading(isLoading) {
       this.loading = isLoading;
