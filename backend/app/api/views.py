@@ -33,8 +33,6 @@ class AddTomographyView(APIView):
 
         serializer = TomographySerializer(data=request.data, context={'request': request, 'doctor': request.user})
         if serializer.is_valid():
-            #values = self.format_results(request.data)
-            #self.send_tomography_to_sheets(values)
             serializer.save(patient=patient)
             response = {'status': 'success',
                         'message': 'Tomography added successfully',
