@@ -2,6 +2,8 @@
 
 MediScanAI is a computer vision healthcare web app applying AI for medical insights. It classifies brain tumor types based on tomography images.
 
+https://github.com/user-attachments/assets/126f216a-39a2-42b9-afed-c11e98f40679
+
 <div style="display: flex; justify-content: space-between;">
     <img src="media/brain/brain1.jpg" alt="Tomograhpy" style="width: 30%; height: auto;">
     <img src="media/brain/brain2.jpg" alt="Tomography 2" style="width: 30%;">
@@ -45,10 +47,6 @@ MediScanAI is developed with educational purposes in mind. It serves as a tool t
 ### Signup & Login Preview | Postman
 
 https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/8bdcb5ce-0dd5-4dac-86ca-a291f7b20536
-
-### Login FrontEnd Preview
-
-https://github.com/user-attachments/assets/126f216a-39a2-42b9-afed-c11e98f40679
 
 ### Request preview
 
