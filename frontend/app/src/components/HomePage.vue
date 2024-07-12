@@ -95,7 +95,7 @@ body {
 .white-box {
   display: flex;
   width: 90%;
-  height: 85%;
+  height: 90%;
   max-width: 800px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
