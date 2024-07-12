@@ -1,6 +1,6 @@
-## MediScanAI | Brain Tumor Classifier API
+## MediScanAI | Brain Tumor Classifier
 
-MediScanAI is a computer vision healthcare project applying AI for medical insights. It classifies brain tumor types based on tomography images.
+MediScanAI is a computer vision healthcare web app applying AI for medical insights. It classifies brain tumor types based on tomography images.
 
 <div style="display: flex; justify-content: space-between;">
     <img src="media/brain/brain1.jpg" alt="Tomograhpy" style="width: 30%; height: auto;">
