@@ -48,7 +48,7 @@ https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022
 
 ### Login FrontEnd Preview
 
-https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/447518a5-7e98-4fa5-b30f-a7604c04c076
+https://github.com/user-attachments/assets/126f216a-39a2-42b9-afed-c11e98f40679
 
 ### Request preview
 
