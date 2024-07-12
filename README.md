@@ -42,16 +42,6 @@ The platform provides probabilities for different types of brain tumors, includi
 
 MediScanAI is developed with educational purposes in mind. It serves as a tool to demonstrate the application of AI in medical imaging and tumor classification. By providing accurate insights and probabilities, the platform aids medical professionals in making informed decisions and improving patient care.
 
-#
-
-### Signup & Login Preview | Postman
-
-https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/8bdcb5ce-0dd5-4dac-86ca-a291f7b20536
-
-### Request preview
-
-<img width="623" alt="Captura de tela 2024-07-05 010826" src="https://github.com/GuiFernandess7/MediScanAI-brain-tumor-classifier/assets/63022500/26dc3745-5aec-4041-921a-ff246dc59983">
-
 ### Docs
 
 <hr>
