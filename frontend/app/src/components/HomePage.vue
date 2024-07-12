@@ -12,12 +12,36 @@
           :src="uploadResult.image"
           alt="Tomography" />
         <p v-else-if="loading">Loading...</p>
-        <p v-else-if="!loading && Object.keys(uploadResult).length > 0">
-          Glioma: {{ uploadResult.data.glioma }} <br />
-          Meningioma: {{ uploadResult.data.meningioma }} <br />
-          Pituitary: {{ uploadResult.data.pituitary }} <br />
-          Notumor: {{ uploadResult.data.notumor }}
-        </p>
+        <div v-else-if="!loading && Object.keys(uploadResult).length > 0">
+          <div class="progress-container">
+            <p>Glioma: {{ formatPercentage(uploadResult.data.glioma) }}%</p>
+            <progress
+              :value="uploadResult.data.glioma * 100"
+              max="100"></progress>
+          </div>
+          <div class="progress-container">
+            <p>
+              Meningioma: {{ formatPercentage(uploadResult.data.meningioma) }}%
+            </p>
+            <progress
+              :value="uploadResult.data.meningioma * 100"
+              max="100"></progress>
+          </div>
+          <div class="progress-container">
+            <p>
+              Pituitary: {{ formatPercentage(uploadResult.data.pituitary) }}%
+            </p>
+            <progress
+              :value="uploadResult.data.pituitary * 100"
+              max="100"></progress>
+          </div>
+          <div class="progress-container">
+            <p>Notumor: {{ formatPercentage(uploadResult.data.notumor) }}%</p>
+            <progress
+              :value="uploadResult.data.notumor * 100"
+              max="100"></progress>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -46,6 +70,9 @@ export default {
     },
     handleLoading(isLoading) {
       this.loading = isLoading;
+    },
+    formatPercentage(value) {
+      return (value * 100).toFixed(2);
     },
   },
 };
@@ -96,5 +123,27 @@ body {
 
 .results-container {
   text-align: center;
+}
+
+progress {
+  width: 100%;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #4caf50;
+  border-radius: 5px;
+}
+
+progress::-moz-progress-bar {
+  background-color: #4caf50;
+  border-radius: 5px;
 }
 </style>
