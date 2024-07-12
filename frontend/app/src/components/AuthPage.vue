@@ -7,7 +7,7 @@
     <div class="video-overlay"></div>
     <div class="content">
       <img class="logo" src="../assets/logo-white.svg" alt="" />
-      <p>Computer vision healthcare project applying AI for medical insights</p>
+      <p>AI Insights for Accurate Tomography Diagnosis</p>
     </div>
   </div>
 </template>
