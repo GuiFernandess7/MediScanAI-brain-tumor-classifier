@@ -194,4 +194,29 @@ export default {
   z-index: 999;
   color: #143888;
 }
+
+.image {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40%;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  transform: scale(1.5);
+}
+
+.image:hover img {
+  transform: scale(1.6);
+}
 </style>
