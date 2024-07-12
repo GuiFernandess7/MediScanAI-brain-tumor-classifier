@@ -35,7 +35,8 @@ The platform provides probabilities for different types of brain tumors, includi
 **Glioma**: Gliomas are tumors that arise from glial cells, which support the function of the brain's nerve cells. They can vary in severity from low-grade to highly aggressive forms.
 
 **No Tumor Detected**: Provides reassurance when no tumor is identified.
-Educational Purpose
+
+## Disclaimer
 
 MediScanAI is developed with educational purposes in mind. It serves as a tool to demonstrate the application of AI in medical imaging and tumor classification. By providing accurate insights and probabilities, the platform aids medical professionals in making informed decisions and improving patient care.
 
