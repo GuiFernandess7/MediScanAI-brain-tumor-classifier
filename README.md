@@ -38,10 +38,6 @@ The platform provides probabilities for different types of brain tumors, includi
 
 **No Tumor Detected**: Provides reassurance when no tumor is identified.
 
-## Disclaimer
-
-MediScanAI is developed with educational purposes in mind. It serves as a tool to demonstrate the application of AI in medical imaging and tumor classification. By providing accurate insights and probabilities, the platform aids medical professionals in making informed decisions and improving patient care.
-
 ### Docs
 
 <hr>
@@ -53,3 +49,12 @@ MediScanAI is developed with educational purposes in mind. It serves as a tool t
 ![image info](media/docs/auth-swagger.png)
 
 <hr>
+
+### References:
+
+https://www.kaggle.com/code/fahadmehfoooz/brain-tumor-detection-keras-pytorch
+https://www.kaggle.com/datasets/navoneel/brain-mri-images-for-brain-tumor-detection/code
+
+## Disclaimer
+
+MediScanAI is developed with educational purposes in mind. It serves as a tool to demonstrate the application of AI in medical imaging and tumor classification. By providing accurate insights and probabilities, the platform aids medical professionals in making informed decisions and improving patient care.
